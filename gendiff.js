@@ -1,8 +1,10 @@
-const { program } = require('commander');
+import { Command } from "commander";
+
+const program  = new Command();
 
 program
-  .command('gendiff')
+  .name('gendiff')
   .description('Compares two configuration files and shows a difference.')
   .option('-h, --help', 'output usage information')
 
-program.parse(process.argv);
+program.parse();

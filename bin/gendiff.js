@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
+import parseData from '../dataParse.js';
+import _ from 'lodash';
 
 program
   .name('gendiff')
@@ -8,5 +10,13 @@ program
   .version('1.0.0')
   .helpOption('-h, --help', 'output usage information')
   .option('-f, --format [type]', 'output format')
+  .arguments('filepath1 filepath2')
+  .action((filepath1, filepath2) => {
+    const data1 = parseData(filepath1);
+    const data2 = parseData(filepath2);
+    
+    const diff = _.isEqual(data1, data2);
+    console.log(diff);
+  });
 
 program.parse();

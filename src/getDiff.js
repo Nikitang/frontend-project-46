@@ -1,4 +1,5 @@
 import _ from 'lodash';
+
 const getDiff = (file1, file2) => {
     const file1Keys = Object.keys(file1);
     const file2Keys = Object.keys(file2);

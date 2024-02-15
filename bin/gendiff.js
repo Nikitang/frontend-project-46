@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import _ from 'lodash';
 import parseData from '../dataParse.js';
 import getDiff from '../src/getDiff.js';
 

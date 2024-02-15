@@ -23,7 +23,7 @@ const getDiff = (file1, file2) => {
       return {
         type: 'nested',
         key,
-        children: buildAST(file1[key], file2[key]),
+        children: getDiff(file1[key], file2[key]),
       };
     }
     if (_.isEqual(file1[key], file2[key])) {

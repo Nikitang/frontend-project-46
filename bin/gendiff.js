@@ -3,6 +3,7 @@
 import { program } from 'commander';
 import parseData from '../dataParse.js';
 import _ from 'lodash';
+import getDiff from '../src/getDiff.js';
 
 program
   .name('gendiff')
@@ -15,7 +16,7 @@ program
     const data1 = parseData(filepath1);
     const data2 = parseData(filepath2);
     
-    const diff = _.isEqual(data1, data2);
+    const diff = getDiff(data1, data2);
     console.log(diff);
   });
 

@@ -24,7 +24,7 @@ jobs:
           hexlet-id: ${{ secrets.HEXLET_ID }}
       
       - name: Run linter
-        run: npx eslint .
+        run: npm run lint
 
       - name: Run test
         run: npm test

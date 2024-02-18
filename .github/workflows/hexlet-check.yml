@@ -23,5 +23,11 @@ jobs:
         with:
           hexlet-id: ${{ secrets.HEXLET_ID }}
 
-      - name: Run test
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run tests
         run: npm test

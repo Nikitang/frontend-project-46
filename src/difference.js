@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const getDiff = (file1, file2) => {
+const builder = (file1, file2) => {
   const file1Keys = Object.keys(file1);
   const file2Keys = Object.keys(file2);
   const sortFile = _.sortBy(_.union(file1Keys, file2Keys));
@@ -23,7 +23,7 @@ const getDiff = (file1, file2) => {
       return {
         type: 'nested',
         key,
-        children: getDiff(file1[key], file2[key]),
+        children: builder(file1[key], file2[key]),
       };
     }
     if (_.isEqual(file1[key], file2[key])) {
@@ -43,9 +43,9 @@ const getDiff = (file1, file2) => {
   return children;
 };
 
-const getDifferenceTree = (file1, file2) => ({
+const buildStructure = (file1, file2) => ({
   type: 'root',
-  children: getDiff(file1, file2),
+  children: builder(file1, file2),
 });
 
-export default getDifferenceTree;
+export default buildStructure;

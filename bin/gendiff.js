@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
 import { program } from 'commander';
-import parser from '../Parsers.js'
 import getDiff from '../src/getDiff.js';
 
 program
@@ -12,9 +10,7 @@ program
   .option('-f, --format [type]', 'output format')
   .arguments('filepath1 filepath2')
   .action((filepath1, filepath2) => {
-    const data1 = parser(filepath1);
-    const data2 = parser(filepath2);
-    const diff = getDiff(data1, data2);
+    const diff = getDiff(filepath1, filepath2, program.opts().format);
     console.log(diff);
   });
 

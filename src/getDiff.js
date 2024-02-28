@@ -1,25 +1,19 @@
 import _ from 'lodash';
+import buildStructure from '../src/difference.js';
+import parser from './parsers.js'
+import path from 'node:path';
+import formatter from './styles/formatter.js';
 
-const getDiff = (file1, file2) => {
-  const file1Keys = Object.keys(file1);
-  const file2Keys = Object.keys(file2);
-  const sortFile = _.sortBy(_.union(file1Keys, file2Keys));
+const pathing = (filePath) => path.resolve(`${process.cwd()}/files/`, filePath);
+const getDiff = (file1, file2, format = 'stylish') => {
+  const resolve1 = pathing(file1);
+  const resolve2 = pathing(file2);
 
-  const result = [];
+  const dataParse1 = parser(resolve1);
+  const dataParse2 = parser(resolve2);
+  const building = buildStructure(dataParse1, dataParse2);
 
-  sortFile.forEach((key) => {
-    if (!Object.hasOwn(file2, key)) {
-      result.push(`  - ${key}: ${file1[key]}`);
-    } else if (!Object.hasOwn(file1, key)) {
-      result.push(`  + ${key}: ${file2[key]}`);
-    } else if (file1[key] !== file2[key]) {
-      result.push(`  - ${key}: ${file1[key]}`);
-      result.push(`  + ${key}: ${file2[key]}`);
-    } else {
-      result.push(`    ${key}: ${file1[key]}`);
-    }
-  });
-  return `{\n${result.join('\n')}\n}`;
+  return formatter(building, format)
 };
 
 export default getDiff;

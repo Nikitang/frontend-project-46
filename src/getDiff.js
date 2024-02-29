@@ -1,11 +1,10 @@
-import _ from 'lodash';
-import buildStructure from '../src/difference.js';
-import parser from './parsers.js'
 import path from 'node:path';
+import buildStructure from './difference.js';
+import parser from './parsers.js';
 import formatter from './styles/formatter.js';
 
-const pathing = (filePath) => path.resolve(`${process.cwd()}/files/`, filePath);
 const getDiff = (file1, file2, format = 'stylish') => {
+  const pathing = (filePath) => path.resolve(`${process.cwd()}/files/`, filePath);
   const resolve1 = pathing(file1);
   const resolve2 = pathing(file2);
 
@@ -13,7 +12,7 @@ const getDiff = (file1, file2, format = 'stylish') => {
   const dataParse2 = parser(resolve2);
   const building = buildStructure(dataParse1, dataParse2);
 
-  return formatter(building, format)
+  return formatter(building, format);
 };
 
 export default getDiff;

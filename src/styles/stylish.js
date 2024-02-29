@@ -1,4 +1,3 @@
-
 const space = ' ';
 const spaceSize = 4;
 const defaultSpace = (depth) => space.repeat(spaceSize * depth - 2);

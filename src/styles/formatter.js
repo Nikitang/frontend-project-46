@@ -6,10 +6,12 @@ const formatter = (tree, format) => {
     case 'stylish':
       return makeStylish(tree);
     case 'plain':
-        return makePlain(tree);
+      return makePlain(tree);
+    case 'json':
+      return JSON.stringify(tree);
     default:
       throw new Error('Incorrect data');
   }
-}
+};
 
 export default formatter;

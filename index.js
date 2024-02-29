@@ -1,7 +1,7 @@
 import path from 'node:path';
-import buildStructure from './difference.js';
-import parser from './parsers.js';
-import formatter from './styles/formatter.js';
+import buildStructure from './src/difference.js';
+import parser from './src/parsers.js';
+import formatter from './src/styles/formatter.js';
 
 const getDiff = (file1, file2, format = 'stylish') => {
   const pathing = (filePath) => path.resolve(`${process.cwd()}/files/`, filePath);

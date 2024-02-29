@@ -3,7 +3,7 @@ import path from 'node:path';
 import resultPlain from '../files/resultPlain.js';
 import resultStylish from '../files/resultStylish.js';
 import resultJson from '../files/resultJson.js';
-import getDiff from '../src/index.js';
+import getDiff from '../index.js';
 import parser from '../src/parsers.js';
 import resultParse1 from '../files/resultParse1.js';
 import resultParse2 from '../files/resultParse2.js';

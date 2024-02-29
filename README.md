@@ -98,7 +98,9 @@ Property 'group1.nest' was updated. From [complex value] to 'str'
 Property 'group2' was removed
 Property 'group3' was added with value: [complex value]
 ```
-Asciinema - JSON: <a href="https://asciinema.org/a/uQWseuQC88hx1lwh2mztplnJr" target="_blank"><img src="https://asciinema.org/a/uQWseuQC88hx1lwh2mztplnJr" /></a>
+Asciinema - JSON: 
+<a href="https://asciinema.org/a/uQWseuQC88hx1lwh2mztplnJr" target="_blank"><img src="https://asciinema.org/a/uQWseuQC88hx1lwh2mztplnJr" /></a>
 
-Asciinema - yml: <a href="https://asciinema.org/a/cqoMX0cqofTypOFfS14Jdh6Ih" target="_blank"><img src="https://asciinema.org/a/cqoMX0cqofTypOFfS14Jdh6Ih" /></a>
+Asciinema - yml: 
+<a href="https://asciinema.org/a/cqoMX0cqofTypOFfS14Jdh6Ih" target="_blank"><img src="https://asciinema.org/a/cqoMX0cqofTypOFfS14Jdh6Ih" /></a>
 

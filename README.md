@@ -3,6 +3,8 @@
 
 <a href="https://codeclimate.com/github/Nikitang/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/12333b07215e6a0435a1/maintainability" /></a>
 
+<a href="https://codeclimate.com/github/Nikitang/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/12333b07215e6a0435a1/test_coverage" /></a>
+
 # Вычислитель отличий
 
 Данный проект представляет собой консольную утилиту для сравнения двух объектов. Объекты считываются только из файлов форматов JSON, YML и YAML.
@@ -98,9 +100,5 @@ Property 'group1.nest' was updated. From [complex value] to 'str'
 Property 'group2' was removed
 Property 'group3' was added with value: [complex value]
 ```
-Asciinema - JSON: 
-<a href="https://asciinema.org/a/uQWseuQC88hx1lwh2mztplnJr" target="_blank"><img src="https://asciinema.org/a/uQWseuQC88hx1lwh2mztplnJr" /></a>
 
-Asciinema - yml: 
-<a href="https://asciinema.org/a/cqoMX0cqofTypOFfS14Jdh6Ih" target="_blank"><img src="https://asciinema.org/a/cqoMX0cqofTypOFfS14Jdh6Ih" /></a>
 
